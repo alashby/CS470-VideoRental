@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `Video_Rental`.`ADDRESS` (
   `Customernum` DECIMAL(5,0) UNSIGNED NOT NULL,
   `Street_number` INT NOT NULL,
   `Street_name` VARCHAR(50) NOT NULL,
-  `Apt_no` VARCHAR(50) NO NULL,
+  `Apt_no` VARCHAR(50) NOT NULL,
   `City` VARCHAR(50) NOT NULL,
   `State` CHAR(2) NOT NULL,
   `Zipcode` VARCHAR(20) NOT NULL,
