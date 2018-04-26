@@ -1,4 +1,6 @@
 import mysql.connector
+import datetime
+import unicodedata
 cnx = mysql.connector.connect(user='admin', password='password',
                               host='localhost',
                               database='video_rental')
@@ -8,4 +10,5 @@ query = ("SELECT Title FROM movie "
          "WHERE Rating = %s")
 cursor.execute(query, ('R',))
 row = cursor.fetchone()
-print(row)
+print(row[0].encode('ascii','ignore'))
+
