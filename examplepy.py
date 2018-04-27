@@ -15,6 +15,25 @@ row = cursor.fetchone()
 print(row[0].encode('ascii','ignore'))
 '''
 
+#verify customer id
+'''
+#customerNum will be the number the customer inputs
+#should already be verified that it is an int
+query = ("SELECT * FROM customer "
+         "WHERE Customer_ID = %s")
+cursor.execute(query, (customerNum,))
+row = cursor.fetchall()
+while not row:
+    print("Customer not found. Please review your input and try again.")
+    #code for user input goes here
+    query = ("SELECT * FROM customer "
+         "WHERE Customer_ID = %s")
+    cursor.execute(query, (customerNum,))
+    row = cursor.fetchall()
+#from here go to browsing. maybe a choice between browsing and view current hold requests or rentals? idk will it even matter
+'''
+
+
 #browse title
 '''
 titles = []
